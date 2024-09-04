@@ -1,18 +1,22 @@
 {
-  "extends": ["plugin:@nx/react", "../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
-    },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "rules": {}
+  "extends": [
+    "plugin:@nx/react",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "../../.eslintrc.json"
+  ],
+  "plugins": ["react", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
     }
-  ]
+  },
+  "rules": {
+    "react/prop-types": "off", // Example: Disable prop-types rule if using TypeScript
+    "@typescript-eslint/explicit-module-boundary-types": "off" // Optional rule based on preference
+  },
+  "ignorePatterns": ["node_modules/", "dist/"]
 }

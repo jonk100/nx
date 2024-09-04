@@ -1,11 +1,22 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "allowJs": false,
-    "esModuleInterop": false,
+    "esModuleInterop": true,  // Changed to true for better compatibility
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "types": ["vite/client"]
+    "types": ["vite/client"],
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,  // Added to ensure declaration files are emitted
+    "emitDeclarationOnly": false  // Ensure it does not only emit declarations
   },
   "files": [],
   "include": [],
@@ -16,6 +27,5 @@
     {
       "path": "./tsconfig.spec.json"
     }
-  ],
-  "extends": "../../tsconfig.base.json"
+  ]
 }
