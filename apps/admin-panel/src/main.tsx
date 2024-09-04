@@ -10,7 +10,7 @@ import Layout from './components/Layout';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/admin">
       <Layout>
         <Routes>
           <Route path="/" element={<App />}>

@@ -2,7 +2,9 @@
   "name": "re-mind-matters",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "ts-node src/main.ts"
+  },
   "private": true,
   "devDependencies": {
     "@astrojs/check": "^0.5.10",
@@ -75,6 +77,7 @@
     "@nrwl/vite": "19.6.5",
     "axios": "^1.7.7",
     "express": "~4.18.3",
+    "path": "^0.12.7",
     "react-router-dom": "6.11.2",
     "tslib": "^2.7.0"
   }

@@ -20,6 +20,9 @@ importers:
       express:
         specifier: ~4.18.3
         version: 4.18.3
+      path:
+        specifier: ^0.12.7
+        version: 0.12.7
       react-router-dom:
         specifier: 6.11.2
         version: 6.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9584,6 +9587,9 @@ packages:
     resolution: {integrity: sha512-5HviZNaZcfqP95rwpv+1HDgUamezbqdSYTyzjTvwtJSnIH+3vnbmWsItli8OFEndS984VT55M3jduxZbX351gg==}
     engines: {node: '>=12'}
 
+  path@0.12.7:
+    resolution: {integrity: sha512-aXXC6s+1w7otVF9UletFkFcDsJeO7lSZBPUQhtb5O0xJe8LtYhj/GxldoL09bBj9+ZmE2hNoHqQSFMN5fikh4Q==}
+
   pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
 
@@ -12175,6 +12181,9 @@ packages:
 
   util.promisify@1.0.1:
     resolution: {integrity: sha512-g9JpC/3He3bm38zsLupWryXHoEcS22YHthuPQSJdMy6KNrzIRzWqcsHzD/WUnqe45whVou4VIsPew37DoXWNrA==}
+
+  util@0.10.4:
+    resolution: {integrity: sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==}
 
   utila@0.4.0:
     resolution: {integrity: sha512-Z0DbgELS9/L/75wZbro8xAnT50pBVFQZ+hUEueGDU5FN51YSCYM+jdxsfCiHjwNP/4LCDD0i/graKpeBnOXKRA==}
@@ -25111,6 +25120,11 @@ snapshots:
 
   path-type@5.0.0: {}
 
+  path@0.12.7:
+    dependencies:
+      process: 0.11.10
+      util: 0.10.4
+
   pathe@1.1.2: {}
 
   pathval@1.1.1: {}
@@ -28011,6 +28025,10 @@ snapshots:
       es-abstract: 1.23.3
       has-symbols: 1.0.3
       object.getownpropertydescriptors: 2.1.8
+
+  util@0.10.4:
+    dependencies:
+      inherits: 2.0.3
 
   utila@0.4.0: {}
 
