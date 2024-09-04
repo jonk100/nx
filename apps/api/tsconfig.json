@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "files": [],
   "include": [],
+  "exclude": ["node_modules"],
   "references": [
     {
       "path": "./tsconfig.app.json"
@@ -11,6 +12,13 @@
     }
   ],
   "compilerOptions": {
-    "esModuleInterop": true
+    "module": "ESNext", // Ensures compatibility with ES modules
+    "moduleResolution": "node",
+    "target": "ESNext", // Use a compatible target like "ESNext" or "ES2020"
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "../../dist"
   }
 }
