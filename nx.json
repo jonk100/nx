@@ -1,9 +1,11 @@
 {
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "nxCloudAccessToken": "YmE5YWI2ZDItNWVjZS00ZmY0LThkYTUtNDM3NjQyOTk1MTRkfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "MzZkYTJhYjQtZDNjNy00OWZmLWIyYjYtMjRlY2RkMWViZGNkfHJlYWQtd3JpdGU=",
   "namedInputs": {
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml"
+    ]
   },
   "plugins": [
     "@nxtensions/astro",
@@ -35,29 +37,83 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/api-e2e/**/*"]
+      "exclude": [
+        "apps/api-e2e/**/*"
+      ]
     }
   ],
   "targetDefaults": {
     "@nxtensions/astro:build": {
-      "inputs": ["default", "^default"],
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "inputs": [
+        "default",
+        "^default"
+      ],
+      "outputs": [
+        "{workspaceRoot}/dist/{projectRoot}"
+      ],
       "cache": true
     },
     "@nxtensions/astro:check": {
-      "inputs": ["default", "^default"],
+      "inputs": [
+        "default",
+        "^default"
+      ],
       "cache": true
     },
     "@nxtensions/astro:preview": {
-      "dependsOn": ["build"]
+      "dependsOn": [
+        "build"
+      ]
     },
     "e2e-ci--**/*": {
-      "dependsOn": ["^build"]
+      "dependsOn": [
+        "^build"
+      ]
     },
     "@nx/esbuild:esbuild": {
       "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["default", "^default"]
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "default",
+        "^default"
+      ]
+    },
+    "start": {
+      "dependsOn": [
+        "^start"
+      ]
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "eject": {
+      "dependsOn": [
+        "^eject"
+      ]
+    },
+    "clean": {
+      "dependsOn": [
+        "^clean"
+      ]
+    },
+    "dev": {
+      "dependsOn": [
+        "^dev"
+      ]
+    },
+    "preview": {
+      "dependsOn": [
+        "^preview"
+      ]
     }
   },
   "defaultProject": "astro",
@@ -78,5 +134,6 @@
         "unitTestRunner": "jest"
       }
     }
-  }
+  },
+  "defaultBase": "main"
 }
