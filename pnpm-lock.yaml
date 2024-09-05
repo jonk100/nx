@@ -21,6 +21,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@nrwl/nx-cloud':
+        specifier: ^19.0.0
+        version: 19.0.0
       '@types/react':
         specifier: ^18.3.5
         version: 18.3.5
@@ -2033,6 +2036,9 @@ packages:
   '@nrwl/js@19.6.5':
     resolution: {integrity: sha512-Ybm+wuCjaujvq8QIJgDM45yqpx675tqGEHnCuyaCwETF+OhgufEIGMwV/ASk+Bcle3btPY7iKUp3YuCjTexnEw==}
 
+  '@nrwl/nx-cloud@19.0.0':
+    resolution: {integrity: sha512-3WuXq3KKXwKnbjOkYK0OXosjD02LIjC3kEkyMIbaE36O9dMp3k/sa4ZtDVC3tAoIrj17VLVmjKfoDYbED1rapw==}
+
   '@nrwl/react@19.6.5':
     resolution: {integrity: sha512-zW1MfS0gPn0iDeFmDcNrb4uvnY6RjQOLSjFGkfFkgPQAtBLRmIBPkESKE/G5Bdtn6HDPcwFQcKwL1ka0O5wUUg==}
 
@@ -3934,6 +3940,10 @@ packages:
   dotenv-expand@11.0.6:
     resolution: {integrity: sha512-8NHi73otpWsZGBSZwwknTXS5pqMOrk9+Ssrna8xCaxkzEpU9OTf9R5ArQGVw03//Zmk9MOwLPng9WwndvpAJ5g==}
     engines: {node: '>=12'}
+
+  dotenv@10.0.0:
+    resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
+    engines: {node: '>=10'}
 
   dotenv@16.4.5:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
@@ -6037,6 +6047,10 @@ packages:
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+
+  nx-cloud@19.0.0:
+    resolution: {integrity: sha512-Aq1vQD8yBIdb5jLVpzsqmu8yDmMvRVdjaM30Pp1hghhlSvorGBlpTwY+TccZJv/hBtVO+SpXK8SnnegRZMrxdw==}
+    hasBin: true
 
   nx@19.6.5:
     resolution: {integrity: sha512-igPYPsBF1BM1YxEiGDvaLOz0CWWoEvxzR7yQg3iULjGG9zKgDFNHHIHJwkyHsCBTtMhhkgeUl16PsTVgDuil3A==}
@@ -10287,6 +10301,12 @@ snapshots:
       - typescript
       - verdaccio
 
+  '@nrwl/nx-cloud@19.0.0':
+    dependencies:
+      nx-cloud: 19.0.0
+    transitivePeerDependencies:
+      - debug
+
   '@nrwl/react@19.6.5(@babel/traverse@7.25.6)(@types/node@22.5.4)(@zkochan/js-yaml@0.0.7)(eslint@9.9.1(jiti@1.21.6))(nx@19.6.5)(typescript@5.5.4)(webpack@5.94.0)':
     dependencies:
       '@nx/react': 19.6.5(@babel/traverse@7.25.6)(@types/node@22.5.4)(@zkochan/js-yaml@0.0.7)(eslint@9.9.1(jiti@1.21.6))(nx@19.6.5)(typescript@5.5.4)(webpack@5.94.0)
@@ -12560,6 +12580,8 @@ snapshots:
   dotenv-expand@11.0.6:
     dependencies:
       dotenv: 16.4.5
+
+  dotenv@10.0.0: {}
 
   dotenv@16.4.5: {}
 
@@ -15368,6 +15390,21 @@ snapshots:
   nth-check@2.1.1:
     dependencies:
       boolbase: 1.0.0
+
+  nx-cloud@19.0.0:
+    dependencies:
+      '@nrwl/nx-cloud': 19.0.0
+      axios: 1.7.7
+      chalk: 4.1.2
+      dotenv: 10.0.0
+      fs-extra: 11.2.0
+      node-machine-id: 1.1.12
+      open: 8.4.2
+      strip-json-comments: 3.1.1
+      tar: 6.2.1
+      yargs-parser: 21.1.1
+    transitivePeerDependencies:
+      - debug
 
   nx@19.6.5:
     dependencies:
